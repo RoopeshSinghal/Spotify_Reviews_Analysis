@@ -156,8 +156,7 @@ sp1_df
 
 <li>Deleted unwanted columns</li>
 <img width="200" alt="Coding" src="https://github.com/RoopeshSinghal/Spotify_Reviews_Analysis/assets/130821105/4bf41578-d00c-4cc6-91c0-9447e2c1fbc0">
-<img width="200" alt="Coding" src="">
-  
+
 <li>Checked for duplicates</li>
 <img width="200" alt="Coding" src="https://github.com/RoopeshSinghal/Spotify_Reviews_Analysis/assets/130821105/b2b1350e-439d-4f4f-be08-05d28bff31af">
 
@@ -235,7 +234,7 @@ Select Count(*) as Total_Reviews
 From sr;
 
 ```
-<img width="400" alt="Coding" src="">
+<img width="400" alt="Coding" src="https://github.com/RoopeshSinghal/Spotify_Reviews_Analysis/assets/130821105/0324b1af-b8cd-47db-96d0-cd589f5d4195">
 <li>Longest Review</li>
 
 ```sql
@@ -245,7 +244,7 @@ ORDER BY LENGTH(Review) DESC
 LIMIT 1;
 
 ```
-<img width="400" alt="Coding" src="">
+<img width="400" alt="Coding" src="https://github.com/RoopeshSinghal/Spotify_Reviews_Analysis/assets/130821105/aaac3737-c090-466a-9eb5-c140f84bed5c">
 <li>Shortest Review</li>
 
 ```sql
@@ -256,7 +255,7 @@ LIMIT 1;
 
 ```
 
-<img width="400" alt="Coding" src="">
+<img width="400" alt="Coding" src="https://github.com/RoopeshSinghal/Spotify_Reviews_Analysis/assets/130821105/81c49832-4109-4afc-8208-dfc1ea5cf5bb">
 <li>Average Score for positive and negative reviews</li>
 
 ```sql
@@ -266,9 +265,8 @@ GROUP BY sentiment;
 
 
 ```
-<img width="400" alt="Coding" src="">
-<li>Users who are not replied by the company
-</li>
+<img width="400" alt="Coding" src="https://github.com/RoopeshSinghal/Spotify_Reviews_Analysis/assets/130821105/bb5c351e-ffa3-4dc7-8f58-66bcfae7762f">
+<li>Users who are not replied by the company</li>
 
 ```sql
 SELECT COUNT(*)AS not_replied
@@ -276,49 +274,68 @@ FROM sr
 WHERE companyreply='NULL';;
 
 ```
-<img width="400" alt="Coding" src="">
+<img width="400" alt="Coding" src="https://github.com/RoopeshSinghal/Spotify_Reviews_Analysis/assets/130821105/7bc205c2-c401-422f-8735-6892eb594234">
 <li>Review including word good</li>
 
 ```sql
-
+SELECT id,review
+FROM sr
+WHERE Review like '%good%’;
 
 ```
-<img width="400" alt="Coding" src="">
-<li>-- Users who are replied by the company
---Different AppRating count</li>
+<img width="400" alt="Coding" src="https://github.com/RoopeshSinghal/Spotify_Reviews_Analysis/assets/130821105/f6603f8f-26f6-4eda-8225-0fd7ea0d9c1f">
+<li>Users who are replied by the company</li>
 
 ```sql
-
+-- Users who are replied by the company
+SELECT COUNT(*)AS replied
+FROM sr
+WHERE companyreply !='NULL’;
 
 ```
-<img width="400" alt="Coding" src="">
+<img width="400" alt="Coding" src="https://github.com/RoopeshSinghal/Spotify_Reviews_Analysis/assets/130821105/f8c2c6b0-e58b-4220-8489-2f7baf5691d2">
 <li>Avg Thumbsupcount by sentiment</li>
 
 ```sql
-
+--Avg Thumbsupcount by sentiment
+SELECT sentiment, AVG(ThumbsUpCount) AS avg_thumbs_up_count
+FROM sr
+GROUP BY sentiment;
 
 ```
-<img width="400" alt="Coding" src="">
+<img width="400" alt="Coding" src="https://github.com/RoopeshSinghal/Spotify_Reviews_Analysis/assets/130821105/c5414d13-00d8-4d55-be5e-20cceb22efad">
 <li>Avg APP Rating</li>
 
 ```sql
+--Avg APP Rating
+Select AVG(AppRating) as Avg_rating
+from sr;
 
 ```
-<img width="400" alt="Coding" src="https://github.com/Mariyajoseph24/SugarFit-Sentiment-Insights-Google-Play-Store-Review-Analysis-and-Power-BI-Reporting/assets/91487663/3f99e894-82d7-45a0-9562-f1d44e6628a7">
+<img width="400" alt="Coding" src="https://github.com/RoopeshSinghal/Spotify_Reviews_Analysis/assets/130821105/d8006008-1593-42c0-8ef5-c5c5cf0e0422">
 <li>User by most no of reviews</li>
 
 ```sql
-
+--User by most no of reviews
+SELECT Username, COUNT(*) AS num_reviews
+FROM sr
+GROUP BY Username
+ORDER BY num_reviews DESC
+LIMIT 1;
 
 ```
-<img width="400" alt="Coding" src="">
+<img width="400" alt="Coding" src="https://github.com/RoopeshSinghal/Spotify_Reviews_Analysis/assets/130821105/14d1371e-9b14-470a-bb65-67dc221c1e8a">
 <li>Different AppRating count</li>
 
 ```sql
-
+--Different AppRating count
+SELECT AppRating, COUNT(*) AS rating_count
+FROM sr
+GROUP BY AppRating
+ORDER BY rating_count DESC;
 
 ```
-<img width="400" alt="Coding" src="">
+<img width="400" alt="Coding" src="https://github.com/RoopeshSinghal/Spotify_Reviews_Analysis/assets/130821105/2bd5d8ad-3061-4aec-8e31-b0c4181db648">
 <li>Most Thumbsupcount On A user's review</li>
 
 ```sql
@@ -328,7 +345,7 @@ ORDER BY ThumbsUpCount DESC
 LIMIT 1;
 
 ```
-<img width="400" alt="Coding" src="">
+<img width="400" alt="Coding" src="https://github.com/RoopeshSinghal/Spotify_Reviews_Analysis/assets/130821105/2fcaae2a-fb5e-4084-96cb-a183e795cc24">
 <li>Avg Length of Review By Sentiment</li>
 
 ```sql
@@ -337,7 +354,7 @@ FROM sr
 GROUP BY sentiment;
 
 ```
-<img width="400" alt="Coding" src="">
+<img width="400" alt="Coding" src="https://github.com/RoopeshSinghal/Spotify_Reviews_Analysis/assets/130821105/e1d9f8c4-8ce7-437a-903a-80f83563af86">
 <li>Percentage of different sentiments</li>
 
 ```sql
@@ -346,8 +363,28 @@ FROM sr
 GROUP BY sentiment;
 
 ```
-<img width="400" alt="Coding" src="">
+<img width="400" alt="Coding" src="https://github.com/RoopeshSinghal/Spotify_Reviews_Analysis/assets/130821105/a921d87e-fe53-481a-96f1-b374ffd10b04">
 </ul>
+
+---------------------------------------------------------------------------------------------------------
+<h1><a name="findings">Findings</a></h1>
+<p>Based on the analysis conducted in the project, the following findings and suggestions can be derived:</p>
+<ol>
+<li><b>Understanding User Sentiment: </b> Through an in-depth analysis of Spotify's Google Play Store reviews, we gained comprehensive insights into user sentiments regarding the platform. This holistic understanding enables us to tailor our strategies to better meet user expectations and enhance overall satisfaction.</li>
+
+<li><b>Identifying Positive Trends:</b> The project uncovered prevalent themes and aspects consistently praised in positive reviews. These insights serve as valuable guidance for emphasizing and further improving features that resonate well with users, ultimately bolstering user satisfaction and retention.</li>
+
+<li><b>Enhancing Product Perception:</b> By promptly addressing both positive and negative reviews, we can actively manage the perception of Spotify on the Google Play Store. Engaging with users' feedback showcases the company's commitment to customer-centricity and fosters a positive brand image.</li>
+
+<li><b>Leveraging User Feedback for Innovation:</b> Analysis of user feedback serves as a rich source of inspiration for innovation and product enhancement. By closely examining suggestions and requests, Spotify can identify opportunities to introduce new features or refine existing ones, thereby staying ahead of evolving user needs and preferences.</li>
+
+<li><b>Proactive Customer Support:</b> Responding to user reviews in a timely and empathetic manner demonstrates Spotify's dedication to customer support. This proactive approach not only resolves individual concerns but also instills confidence in potential users, encouraging greater adoption and loyalty.</li>
+
+<li><b>Strengthening Community Engagement:</b> Engaging with users through review responses fosters a sense of community and belonging among Spotify users on the Google Play Store. This interaction encourages users to share their experiences and recommendations, contributing to a vibrant ecosystem around the platform.</li>
+
+<li><b>Amplifying Positive Experiences:</b> By amplifying positive experiences shared by users, Spotify can leverage user-generated content to drive brand advocacy and organic growth. Highlighting success stories and testimonials reinforces the value proposition of the platform, attracting new users and retaining existing ones.</li>
+
+<li><b>Continuous Improvement Culture:</b> Embracing a culture of continuous improvement based on user feedback ensures that Spotify remains responsive to evolving user preferences and market dynamics. Regular analysis and adaptation enable the platform to evolve iteratively, maintaining its relevance and competitiveness in the dynamic digital landscape.</li></ol>
 
 
 
