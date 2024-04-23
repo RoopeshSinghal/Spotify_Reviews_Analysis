@@ -7,7 +7,7 @@
   <li><a href="#datascrapingandsentimentanalysis">Data Scraping and Sentiment Analysis</a></li>
   <li><a href="#datacleaningandexploration">Data Cleaning and Exploration</a></li>
   <li><a href="#dataanalysis">Data Analysis</a></li>
-  <li><a href="#findings">Comments</a></li>
+  <li><a href="#findings">Conclusion</a></li>
 </ul>
 
 <h1><a name="introduction">Introduction</a></h1>
@@ -164,8 +164,8 @@ sp1_df
 <img width="200" alt="Coding" src="![image](https://github.com/RoopeshSinghal/Spotify_Reviews_Analysis/assets/130821105/211ced4c-4a64-4161-a368-935eb7283acc">
 
 <li>Handling the missing values</li></ul>
-<ol>
-<li>Replaced the blank space with NULL for the column Company Reply</li>
+
+<ol><li>Replaced the blank space with NULL for the column Company Reply</li>
 <li>Replaced the blank space in the reply date column with a default date value which is 10-04-2024</li></ol>
 <img width="200" alt="Coding" src="https://github.com/RoopeshSinghal/Spotify_Reviews_Analysis/assets/130821105/453b2ab8-0c7f-4729-81a0-50be0039b1e5">
 
@@ -367,8 +367,8 @@ GROUP BY sentiment;
 </ul>
 
 ---------------------------------------------------------------------------------------------------------
-<h1><a name="findings">Findings</a></h1>
-<p>Based on the analysis conducted in the project, the following findings and suggestions can be derived:</p>
+<h1><a name="findings">Conclusion</a></h1>
+<p>Based on the analysis conducted in the project, the following concluions can be derived:</p>
 <ol>
 <li><b>Understanding User Sentiment: </b> Through an in-depth analysis of Spotify's Google Play Store reviews, we gained comprehensive insights into user sentiments regarding the platform. This holistic understanding enables us to tailor our strategies to better meet user expectations and enhance overall satisfaction.</li>
 
