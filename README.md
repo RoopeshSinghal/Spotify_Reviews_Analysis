@@ -13,6 +13,12 @@
 <h1><a name="introduction">Introduction</a></h1>
 <p>In today's digital age, music streaming platforms like Spotify have become an integral part of our daily lives, offering users access to millions of songs at their fingertips. The success of such platforms hinges not only on their vast music libraries but also on the satisfaction and feedback of their users. This project aims to analyze user reviews of Spotify on the Google Play Store, utilizing advanced analytics techniques to extract valuable insights. Through sentiment analysis and thematic categorization, we'll identify areas for improvement and inform strategic decisions to enhance the user experience. Join us in uncovering the voices of Spotify users to drive continuous improvement and innovation within the platform..</p>
 
+<p>Project Description:</p>
+<p>The Spotify Google Play Store Reviews Analysis project aims to extract, clean, and analyze user reviews of the Spotify mobile app on the Google Play Store. Using Python for data extraction, Excel for data cleaning, and SQL for analysis, this project provides valuable insights into user sentiments, preferences, and feedback.</p>
+<ol>
+<li><b>Understanding User Issues:</b> By analyzing the negative reviews, we gained insights into user concerns and issues. This enables us to address them more effectively, leading to improved user satisfaction.</li>
+
+
 <ul>Tools Used🛠️:<br>
 <li>Database:PostgreSQL</li>
 <li>Programming Language: Python<br></li>
