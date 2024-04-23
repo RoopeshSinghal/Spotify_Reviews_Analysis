@@ -161,7 +161,7 @@ sp1_df
 <img width="200" alt="Coding" src="https://github.com/RoopeshSinghal/Spotify_Reviews_Analysis/assets/130821105/b2b1350e-439d-4f4f-be08-05d28bff31af">
 
 <li>Deleted AppVersion column as there was no suitable datatype</li>
-<img width="200" alt="Coding" src="![image](https://github.com/RoopeshSinghal/Spotify_Reviews_Analysis/assets/130821105/211ced4c-4a64-4161-a368-935eb7283acc">
+<img width="200" alt="Coding" src="https://github.com/RoopeshSinghal/Spotify_Reviews_Analysis/assets/130821105/211ced4c-4a64-4161-a368-935eb7283acc">
 
 <li>Handling the missing values</li></ul>
 
